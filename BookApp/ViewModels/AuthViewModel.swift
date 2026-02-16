@@ -15,8 +15,22 @@ class AuthViewModel {
     // MARK: - Forgot Password Fields
     var forgotPasswordEmail = ""
 
+    // MARK: - Setup Store Fields
+    var storeName = ""
+    var storeFullName = ""
+    var storePrimaryEmail = ""
+    var storeMobilePhone = ""
+    var storeAddress = ""
+    var storeAddress2 = ""
+    var storeCity = ""
+    var storeState = ""
+    var storeZipCode = ""
+    var storeCountry = "United States"
+
     // MARK: - Navigation State
     var showForgotPassword = false
+    var isAuthenticated = false
+    var showPlaidIntro = false
 
     // MARK: - Validation
     var loginEmailError: String? {
@@ -42,6 +56,13 @@ class AuthViewModel {
         !forgotPasswordEmail.isEmpty && isValidEmail(forgotPasswordEmail)
     }
 
+    var canProceedFromSetup: Bool {
+        !storeFullName.isEmpty && !storeName.isEmpty && !storePrimaryEmail.isEmpty
+            && isValidEmail(storePrimaryEmail) && !storeMobilePhone.isEmpty
+            && !storeAddress.isEmpty && !storeCity.isEmpty
+            && !storeState.isEmpty && !storeZipCode.isEmpty && !storeCountry.isEmpty
+    }
+
     // MARK: - Actions (placeholder for future backend integration)
     func login() {
         // TODO: Wire up authentication backend
@@ -51,6 +72,7 @@ class AuthViewModel {
     func createAccount() {
         // TODO: Wire up authentication backend
         print("Create account for: \(registerName), \(registerEmail)")
+        isAuthenticated = true
     }
 
     func resetPassword() {

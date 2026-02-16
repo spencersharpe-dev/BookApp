@@ -16,6 +16,11 @@
 		B3628808E1985227EC4E030A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D9F43580DA615D8B6D69CC /* ContentView.swift */; };
 		CBA6534A4043D41B000E688B /* BookAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38AB250C91DC38A324DD858 /* BookAppApp.swift */; };
 		D65AA6F51A4395A7D2547B25 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6133252D56CEDBB5B3383031 /* ForgotPasswordView.swift */; };
+		A3F2E1D0C9B8A7F6E5D4C3B2 /* LinkBankAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */; };
+		D6C5B4A3F2E1D0C9B8A7F6E5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D6 /* OnboardingView.swift */; };
+		C5B4A3F2E1D0C9B8A7F6E5D4 /* PlaidBankSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */; };
+		B4A3F2E1D0C9B8A7F6E5D4C3 /* PlaidIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */; };
+		F2E1D0C9B8A7F6E5D4C3B2A1 /* SetUpStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		AC8A94A8155AC365E45F0239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F33BBFC9281C2EC14EB0B1F1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		F38AB250C91DC38A324DD858 /* BookAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppApp.swift; sourceTree = "<group>"; };
+		B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkBankAccountView.swift; sourceTree = "<group>"; };
+		E5F6A7B8C9D0E1F2A3B4C5D6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidBankSelectionView.swift; sourceTree = "<group>"; };
+		C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidIntroView.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpStoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -62,7 +72,12 @@
 			children = (
 				311004A53C198165F16DA876 /* CreateAccountView.swift */,
 				6133252D56CEDBB5B3383031 /* ForgotPasswordView.swift */,
+				B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */,
 				F33BBFC9281C2EC14EB0B1F1 /* LoginView.swift */,
+				E5F6A7B8C9D0E1F2A3B4C5D6 /* OnboardingView.swift */,
+				D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */,
+				C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +176,11 @@
 				B138859B828A350ECB1DD58F /* LoginView.swift in Sources */,
 				78CD1AA33C4880D7D4BF71DD /* PrimaryButton.swift in Sources */,
 				ACF6525FC41274FBE3C7B4ED /* UnderlineTextField.swift in Sources */,
+				A3F2E1D0C9B8A7F6E5D4C3B2 /* LinkBankAccountView.swift in Sources */,
+				D6C5B4A3F2E1D0C9B8A7F6E5 /* OnboardingView.swift in Sources */,
+				C5B4A3F2E1D0C9B8A7F6E5D4 /* PlaidBankSelectionView.swift in Sources */,
+				B4A3F2E1D0C9B8A7F6E5D4C3 /* PlaidIntroView.swift in Sources */,
+				F2E1D0C9B8A7F6E5D4C3B2A1 /* SetUpStoreView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
