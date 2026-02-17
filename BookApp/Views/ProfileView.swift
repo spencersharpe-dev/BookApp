@@ -85,5 +85,11 @@ struct ProfileView: View {
         .fullScreenCover(isPresented: $showBookDetails) {
             BookDetailsView(viewModel: viewModel)
         }
+        .onChange(of: viewModel.dismissSellFlow) { _, shouldDismiss in
+            if shouldDismiss {
+                showBookDetails = false
+                viewModel.dismissSellFlow = false
+            }
+        }
     }
 }

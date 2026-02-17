@@ -39,11 +39,15 @@ class AuthViewModel {
     var bookSignature = ""
     var bookBindingType = ""
 
+    // MARK: - Pricing
+    var bookPrice = ""
+
     // MARK: - Navigation State
     var showForgotPassword = false
     var isAuthenticated = false
     var onboardingComplete = false
     var showPlaidIntro = false
+    var dismissSellFlow = false
 
     // MARK: - Validation
     var loginEmailError: String? {

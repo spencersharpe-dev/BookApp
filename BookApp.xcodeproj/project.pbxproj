@@ -3,29 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00DD99CC88BB77AA66FF55EE /* BookCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */; };
 		0D3565F555FAF8A4515B77B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8A94A8155AC365E45F0239 /* Assets.xcassets */; };
+		66FF55EE44DD33CC22BB11AA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */; };
+		77AA66FF55EE44DD33CC22BB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */; };
 		78CD1AA33C4880D7D4BF71DD /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC9DD5B3B79BDA2ABD8927E /* PrimaryButton.swift */; };
 		790CE1BB9BA68A65F1FF247E /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B58C3AB2F8FB727F7DE4B2 /* AuthViewModel.swift */; };
+		88BB77AA66FF55EE44DD33CC /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33DD44EE55FF66AA77BB88 /* BookDetailsView.swift */; };
+		99CC88BB77AA66FF55EE44DD /* TakePhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */; };
 		9B75AA1BFAD23A7A164A505A /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311004A53C198165F16DA876 /* CreateAccountView.swift */; };
+		A3F2E1D0C9B8A7F6E5D4C3B2 /* LinkBankAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */; };
 		ACF6525FC41274FBE3C7B4ED /* UnderlineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704CC9D4BAA0F80D2124D846 /* UnderlineTextField.swift */; };
 		B138859B828A350ECB1DD58F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BBFC9281C2EC14EB0B1F1 /* LoginView.swift */; };
 		B3628808E1985227EC4E030A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D9F43580DA615D8B6D69CC /* ContentView.swift */; };
+		B4A3F2E1D0C9B8A7F6E5D4C3 /* PlaidIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */; };
+		C5B4A3F2E1D0C9B8A7F6E5D4 /* PlaidBankSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */; };
 		CBA6534A4043D41B000E688B /* BookAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38AB250C91DC38A324DD858 /* BookAppApp.swift */; };
 		D65AA6F51A4395A7D2547B25 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6133252D56CEDBB5B3383031 /* ForgotPasswordView.swift */; };
-		A3F2E1D0C9B8A7F6E5D4C3B2 /* LinkBankAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */; };
 		D6C5B4A3F2E1D0C9B8A7F6E5 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F6A7B8C9D0E1F2A3B4C5D6 /* OnboardingView.swift */; };
-		C5B4A3F2E1D0C9B8A7F6E5D4 /* PlaidBankSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */; };
-		B4A3F2E1D0C9B8A7F6E5D4C3 /* PlaidIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */; };
 		F2E1D0C9B8A7F6E5D4C3B2A1 /* SetUpStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */; };
-		66FF55EE44DD33CC22BB11AA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */; };
-		77AA66FF55EE44DD33CC22BB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */; };
-		88BB77AA66FF55EE44DD33CC /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33DD44EE55FF66AA77BB88 /* BookDetailsView.swift */; };
-		99CC88BB77AA66FF55EE44DD /* TakePhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */; };
-		00DD99CC88BB77AA66FF55EE /* BookCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */; };
+		1FEEDDCCBBAA00998877665F /* AddPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6677889900AABBCCDDEEF1 /* AddPriceView.swift */; };
+		2FB011223344556677889AAF /* ReviewListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9988776655443322110BF2 /* ReviewListingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,21 +36,23 @@
 		3EC9DD5B3B79BDA2ABD8927E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		6133252D56CEDBB5B3383031 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		704CC9D4BAA0F80D2124D846 /* UnderlineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlineTextField.swift; sourceTree = "<group>"; };
-		79CCFFDC224855117DE53A7E /* BookApp.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CCFFDC224855117DE53A7E /* BookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B58C3AB2F8FB727F7DE4B2 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
-		AC8A94A8155AC365E45F0239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F33BBFC9281C2EC14EB0B1F1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		F38AB250C91DC38A324DD858 /* BookAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppApp.swift; sourceTree = "<group>"; };
-		B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkBankAccountView.swift; sourceTree = "<group>"; };
-		E5F6A7B8C9D0E1F2A3B4C5D6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidBankSelectionView.swift; sourceTree = "<group>"; };
-		C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidIntroView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpStoreView.swift; sourceTree = "<group>"; };
 		AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		AC8A94A8155AC365E45F0239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkBankAccountView.swift; sourceTree = "<group>"; };
 		BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidIntroView.swift; sourceTree = "<group>"; };
 		CC33DD44EE55FF66AA77BB88 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidBankSelectionView.swift; sourceTree = "<group>"; };
 		DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotosView.swift; sourceTree = "<group>"; };
+		E5F6A7B8C9D0E1F2A3B4C5D6 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCameraView.swift; sourceTree = "<group>"; };
+		F33BBFC9281C2EC14EB0B1F1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F38AB250C91DC38A324DD858 /* BookAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppApp.swift; sourceTree = "<group>"; };
+		FF6677889900AABBCCDDEEF1 /* AddPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriceView.swift; sourceTree = "<group>"; };
+		AA9988776655443322110BF2 /* ReviewListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -80,6 +84,7 @@
 		981E580715ADE78D1BDBD5E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FF6677889900AABBCCDDEEF1 /* AddPriceView.swift */,
 				311004A53C198165F16DA876 /* CreateAccountView.swift */,
 				6133252D56CEDBB5B3383031 /* ForgotPasswordView.swift */,
 				B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */,
@@ -92,6 +97,7 @@
 				EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */,
 				AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */,
 				BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */,
+				AA9988776655443322110BF2 /* ReviewListingView.swift */,
 				DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */,
 			);
 			path = Views;
@@ -146,7 +152,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 2620;
 			};
 			buildConfigurationList = CD8CE6BAC3FD002EA3116672 /* Build configuration list for PBXProject "BookApp" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -158,7 +164,6 @@
 			);
 			mainGroup = 672976DCDD59E48D84D508F5;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -201,6 +206,8 @@
 				88BB77AA66FF55EE44DD33CC /* BookDetailsView.swift in Sources */,
 				99CC88BB77AA66FF55EE44DD /* TakePhotosView.swift in Sources */,
 				00DD99CC88BB77AA66FF55EE /* BookCameraView.swift in Sources */,
+				1FEEDDCCBBAA00998877665F /* AddPriceView.swift in Sources */,
+				2FB011223344556677889AAF /* ReviewListingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +251,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -257,6 +265,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -347,6 +356,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -367,6 +377,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;

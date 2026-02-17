@@ -45,6 +45,7 @@ struct TakePhotosView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var selectedPhotoType: PhotoType?
     @State private var capturedPhotos: [PhotoType: UIImage] = [:]
+    @State private var showAddPrice = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -114,7 +115,7 @@ struct TakePhotosView: View {
             HStack {
                 Spacer()
                 Button {
-                    // TODO: Navigate to pricing
+                    showAddPrice = true
                 } label: {
                     HStack(spacing: 8) {
                         Text("Add Price")
@@ -134,6 +135,14 @@ struct TakePhotosView: View {
         .fullScreenCover(item: $selectedPhotoType) { photoType in
             BookCameraView(photoType: photoType) { image in
                 capturedPhotos[photoType] = image
+            }
+        }
+        .fullScreenCover(isPresented: $showAddPrice) {
+            AddPriceView(viewModel: viewModel)
+        }
+        .onChange(of: viewModel.dismissSellFlow) { _, shouldDismiss in
+            if shouldDismiss {
+                dismiss()
             }
         }
     }
