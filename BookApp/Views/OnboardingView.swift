@@ -107,7 +107,7 @@ struct OnboardingView: View {
                     }
                 } else {
                     Button {
-                        // TODO: Navigate to main app
+                        viewModel.onboardingComplete = true
                     } label: {
                         Text("Finish")
                             .font(.title2)

@@ -27,9 +27,22 @@ class AuthViewModel {
     var storeZipCode = ""
     var storeCountry = "United States"
 
+    // MARK: - Book Details Fields
+    var bookAuthor = ""
+    var bookTitle = ""
+    var bookISBN = ""
+    var bookPublisher = ""
+    var bookDatePublished = ""
+    var bookGenre = ""
+    var bookAttributes = ""
+    var bookCondition = ""
+    var bookSignature = ""
+    var bookBindingType = ""
+
     // MARK: - Navigation State
     var showForgotPassword = false
     var isAuthenticated = false
+    var onboardingComplete = false
     var showPlaidIntro = false
 
     // MARK: - Validation
@@ -54,6 +67,13 @@ class AuthViewModel {
 
     var canResetPassword: Bool {
         !forgotPasswordEmail.isEmpty && isValidEmail(forgotPasswordEmail)
+    }
+
+    var canProceedToPhotos: Bool {
+        !bookAuthor.isEmpty && !bookTitle.isEmpty && !bookISBN.isEmpty
+            && !bookPublisher.isEmpty && !bookDatePublished.isEmpty
+            && !bookGenre.isEmpty && !bookCondition.isEmpty
+            && !bookBindingType.isEmpty
     }
 
     var canProceedFromSetup: Bool {

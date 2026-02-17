@@ -5,7 +5,9 @@ struct ContentView: View {
     @State private var showCreateAccount = false
 
     var body: some View {
-        if viewModel.isAuthenticated {
+        if viewModel.onboardingComplete {
+            MainTabView(viewModel: viewModel)
+        } else if viewModel.isAuthenticated {
             SetUpStoreView(viewModel: viewModel)
         } else {
             Group {

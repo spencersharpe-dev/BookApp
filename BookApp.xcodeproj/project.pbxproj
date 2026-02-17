@@ -21,6 +21,11 @@
 		C5B4A3F2E1D0C9B8A7F6E5D4 /* PlaidBankSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */; };
 		B4A3F2E1D0C9B8A7F6E5D4C3 /* PlaidIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */; };
 		F2E1D0C9B8A7F6E5D4C3B2A1 /* SetUpStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */; };
+		66FF55EE44DD33CC22BB11AA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */; };
+		77AA66FF55EE44DD33CC22BB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */; };
+		88BB77AA66FF55EE44DD33CC /* BookDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC33DD44EE55FF66AA77BB88 /* BookDetailsView.swift */; };
+		99CC88BB77AA66FF55EE44DD /* TakePhotosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */; };
+		00DD99CC88BB77AA66FF55EE /* BookCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidBankSelectionView.swift; sourceTree = "<group>"; };
 		C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaidIntroView.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpStoreView.swift; sourceTree = "<group>"; };
+		AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CC33DD44EE55FF66AA77BB88 /* BookDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsView.swift; sourceTree = "<group>"; };
+		DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotosView.swift; sourceTree = "<group>"; };
+		EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCameraView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -78,6 +88,11 @@
 				D4E5F6A7B8C9D0E1F2A3B4C5 /* PlaidBankSelectionView.swift */,
 				C3D4E5F6A7B8C9D0E1F2A3B4 /* PlaidIntroView.swift */,
 				A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */,
+				CC33DD44EE55FF66AA77BB88 /* BookDetailsView.swift */,
+				EE55FF66AA77BB88CC99DD00 /* BookCameraView.swift */,
+				AA11BB22CC33DD44EE55FF66 /* MainTabView.swift */,
+				BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */,
+				DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +196,11 @@
 				C5B4A3F2E1D0C9B8A7F6E5D4 /* PlaidBankSelectionView.swift in Sources */,
 				B4A3F2E1D0C9B8A7F6E5D4C3 /* PlaidIntroView.swift in Sources */,
 				F2E1D0C9B8A7F6E5D4C3B2A1 /* SetUpStoreView.swift in Sources */,
+				66FF55EE44DD33CC22BB11AA /* MainTabView.swift in Sources */,
+				77AA66FF55EE44DD33CC22BB /* ProfileView.swift in Sources */,
+				88BB77AA66FF55EE44DD33CC /* BookDetailsView.swift in Sources */,
+				99CC88BB77AA66FF55EE44DD /* TakePhotosView.swift in Sources */,
+				00DD99CC88BB77AA66FF55EE /* BookCameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +271,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to take photos of books for your listings.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -273,6 +294,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to take photos of books for your listings.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
