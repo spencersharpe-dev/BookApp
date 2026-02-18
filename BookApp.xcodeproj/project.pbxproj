@@ -37,6 +37,8 @@
 		67DE45CD23AB12EF90CD78AB /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */; };
 		78EF56DE34CD12BC90AB78FA /* SupportListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B2C3D4E5F6A7B8C9D0E1F /* SupportListView.swift */; };
 		89FA67EF45DE23CD01BC89AB /* SupportMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C3D4E5F6A7B8C9D0E1F2A /* SupportMessageView.swift */; };
+		9A8B7C6D5E4F3A2B1C0D9E8F /* AgreementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A4B5D6E7F8A9B0C1D2E3F /* AgreementsView.swift */; };
+		A1B2C3D4E5F6071829304A5B /* EarningsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B5C6A7E8F9A0B1C2D3E4F /* EarningsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		5A1B2C3D4E5F6A7B8C9D0E1F /* SupportListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportListView.swift; sourceTree = "<group>"; };
 		6B2C3D4E5F6A7B8C9D0E1F2A /* SupportMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMessageView.swift; sourceTree = "<group>"; };
+		7C3A4B5D6E7F8A9B0C1D2E3F /* AgreementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementsView.swift; sourceTree = "<group>"; };
+		8D4B5C6A7E8F9A0B1C2D3E4F /* EarningsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -104,6 +108,8 @@
 			children = (
 				DE45FA67BC89DE01FA23AB34 /* ActiveListingsView.swift */,
 				FF6677889900AABBCCDDEEF1 /* AddPriceView.swift */,
+				7C3A4B5D6E7F8A9B0C1D2E3F /* AgreementsView.swift */,
+				8D4B5C6A7E8F9A0B1C2D3E4F /* EarningsView.swift */,
 				311004A53C198165F16DA876 /* CreateAccountView.swift */,
 				6133252D56CEDBB5B3383031 /* ForgotPasswordView.swift */,
 				B2C3D4E5F6A7B8C9D0E1F2A3 /* LinkBankAccountView.swift */,
@@ -244,6 +250,8 @@
 				67DE45CD23AB12EF90CD78AB /* NotificationsView.swift in Sources */,
 				78EF56DE34CD12BC90AB78FA /* SupportListView.swift in Sources */,
 				89FA67EF45DE23CD01BC89AB /* SupportMessageView.swift in Sources */,
+				9A8B7C6D5E4F3A2B1C0D9E8F /* AgreementsView.swift in Sources */,
+				A1B2C3D4E5F6071829304A5B /* EarningsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

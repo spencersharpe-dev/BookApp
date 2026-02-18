@@ -20,7 +20,7 @@ struct MainTabView: View {
                 }
                 .tag(1)
 
-            PlaceholderTabView(title: "Earnings")
+            EarningsView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "dollarsign.circle")
                     Text("Earnings")

@@ -63,6 +63,23 @@ class AuthViewModel {
     // MARK: - Listings
     var activeListings: [BookListing] = []
 
+    // MARK: - Earnings Transactions
+    var earningsTransactions: [EarningsTransaction] = [
+        EarningsTransaction(description: "Sold: The Great Gatsby", amount: 24.99, type: .sale, date: Date().addingTimeInterval(-2 * 86400)),
+        EarningsTransaction(description: "Sold: To Kill a Mockingbird", amount: 18.50, type: .sale, date: Date().addingTimeInterval(-5 * 86400)),
+        EarningsTransaction(description: "Transfer to Chase Bank", amount: -50.00, type: .cashout, date: Date().addingTimeInterval(-7 * 86400)),
+        EarningsTransaction(description: "Sold: 1984 by George Orwell", amount: 12.00, type: .sale, date: Date().addingTimeInterval(-10 * 86400)),
+        EarningsTransaction(description: "Refund: Damaged in shipping", amount: -15.75, type: .refund, date: Date().addingTimeInterval(-12 * 86400)),
+        EarningsTransaction(description: "Sold: Pride and Prejudice", amount: 9.99, type: .sale, date: Date().addingTimeInterval(-15 * 86400)),
+        EarningsTransaction(description: "Transfer to Bank of America", amount: -100.00, type: .cashout, date: Date().addingTimeInterval(-18 * 86400)),
+        EarningsTransaction(description: "Credit: Return accepted", amount: 15.75, type: .credit, date: Date().addingTimeInterval(-20 * 86400)),
+        EarningsTransaction(description: "Sold: Moby Dick", amount: 22.50, type: .sale, date: Date().addingTimeInterval(-22 * 86400))
+    ]
+
+    var totalEarnings: Double {
+        earningsTransactions.filter { $0.amount > 0 }.reduce(0) { $0 + $1.amount }
+    }
+
     // MARK: - Support
     var supportRequests: [SupportRequest] = [
         SupportRequest(question: "I haven't received my payment for order #004521. It's been over 7 days since the book was delivered.", status: .active, dateCreated: Date().addingTimeInterval(-86400)),
@@ -157,6 +174,10 @@ class AuthViewModel {
         listing.dateSold = Date()
         activeListings.append(listing)
         totalBalance += price
+        earningsTransactions.insert(
+            EarningsTransaction(description: "Sold: \(bookTitle)", amount: price, type: .sale, date: Date()),
+            at: 0
+        )
         resetBookFields()
     }
 
@@ -229,6 +250,43 @@ struct BookListing: Identifiable {
 
     var formattedDateSold: String {
         guard let date = dateSold else { return "Pending" }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
+    }
+}
+
+enum EarningsTransactionType: String {
+    case sale = "Sale"
+    case cashout = "Cash Out"
+    case refund = "Refund"
+    case credit = "Credit"
+}
+
+struct EarningsTransaction: Identifiable {
+    let id = UUID().uuidString
+    let description: String
+    let amount: Double
+    let type: EarningsTransactionType
+    let date: Date
+
+    var isPositive: Bool {
+        amount > 0
+    }
+
+    var formattedAmount: String {
+        if isPositive {
+            return String(format: "+$%.2f", amount)
+        } else {
+            return String(format: "-$%.2f", abs(amount))
+        }
+    }
+
+    var amountColor: Color {
+        isPositive ? .green : .red
+    }
+
+    var formattedDate: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter.string(from: date)
