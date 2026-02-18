@@ -2,10 +2,9 @@ import SwiftUI
 
 struct MainTabView: View {
     @Bindable var viewModel: AuthViewModel
-    @State private var selectedTab = 3
 
     var body: some View {
-        TabView(selection: $selectedTab) {
+        TabView(selection: $viewModel.selectedTab) {
             StoreHomeView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "storefront")

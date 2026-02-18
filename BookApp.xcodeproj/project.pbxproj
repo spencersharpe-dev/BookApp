@@ -41,6 +41,11 @@
 		A1B2C3D4E5F6071829304A5B /* EarningsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B5C6A7E8F9A0B1C2D3E4F /* EarningsView.swift */; };
 		B2C3D4E5F60718293A4B5C6D /* StoreHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5A6B7C8D0F1A2B3C4D5E6F /* StoreHomeView.swift */; };
 		C3D4E5F6071829304B5C6D7E /* StoreProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6B7C8D9E1A2B3C4D5E6F7A /* StoreProductView.swift */; };
+		D4E5F6A7B8C90D1E2F3A4B5C /* SellerStoreOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2B3C4D5E6F7A8B9C0D1E2F /* SellerStoreOverlayView.swift */; };
+		E5F6A7B8C90D1E2F3A4B5C6D /* BuyOfferProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B3C4D5E6F7A8B9C0D1E2F3A /* BuyOfferProductView.swift */; };
+		F6A7B8C90D1E2F3A4B5C6D7E /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F7A8B9C0D1E2F3A4B /* CheckoutView.swift */; };
+		A7B8C90D1E2F3A4B5C6D7E8F /* MakeOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5E6F7A8B9C0D1E2F3A4B5C /* MakeOfferView.swift */; };
+		B8C90D1E2F3A4B5C6D7E8F9A /* OfferSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F7A8B9C0D1E2F3A4B5C6D /* OfferSuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +84,11 @@
 		8D4B5C6A7E8F9A0B1C2D3E4F /* EarningsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsView.swift; sourceTree = "<group>"; };
 		9E5A6B7C8D0F1A2B3C4D5E6F /* StoreHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreHomeView.swift; sourceTree = "<group>"; };
 		0F6B7C8D9E1A2B3C4D5E6F7A /* StoreProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProductView.swift; sourceTree = "<group>"; };
+		1A2B3C4D5E6F7A8B9C0D1E2F /* SellerStoreOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellerStoreOverlayView.swift; sourceTree = "<group>"; };
+		2B3C4D5E6F7A8B9C0D1E2F3A /* BuyOfferProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyOfferProductView.swift; sourceTree = "<group>"; };
+		3C4D5E6F7A8B9C0D1E2F3A4B /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		4D5E6F7A8B9C0D1E2F3A4B5C /* MakeOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOfferView.swift; sourceTree = "<group>"; };
+		5E6F7A8B9C0D1E2F3A4B5C6D /* OfferSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -138,6 +148,11 @@
 				6B2C3D4E5F6A7B8C9D0E1F2A /* SupportMessageView.swift */,
 				9E5A6B7C8D0F1A2B3C4D5E6F /* StoreHomeView.swift */,
 				0F6B7C8D9E1A2B3C4D5E6F7A /* StoreProductView.swift */,
+				1A2B3C4D5E6F7A8B9C0D1E2F /* SellerStoreOverlayView.swift */,
+				2B3C4D5E6F7A8B9C0D1E2F3A /* BuyOfferProductView.swift */,
+				3C4D5E6F7A8B9C0D1E2F3A4B /* CheckoutView.swift */,
+				4D5E6F7A8B9C0D1E2F3A4B5C /* MakeOfferView.swift */,
+				5E6F7A8B9C0D1E2F3A4B5C6D /* OfferSuccessView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +275,11 @@
 				A1B2C3D4E5F6071829304A5B /* EarningsView.swift in Sources */,
 				B2C3D4E5F60718293A4B5C6D /* StoreHomeView.swift in Sources */,
 				C3D4E5F6071829304B5C6D7E /* StoreProductView.swift in Sources */,
+				D4E5F6A7B8C90D1E2F3A4B5C /* SellerStoreOverlayView.swift in Sources */,
+				E5F6A7B8C90D1E2F3A4B5C6D /* BuyOfferProductView.swift in Sources */,
+				F6A7B8C90D1E2F3A4B5C6D7E /* CheckoutView.swift in Sources */,
+				A7B8C90D1E2F3A4B5C6D7E8F /* MakeOfferView.swift in Sources */,
+				B8C90D1E2F3A4B5C6D7E8F9A /* OfferSuccessView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Worm;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to take photos of books for your listings.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -342,7 +363,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bookapp.BookApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wormapp.Worm;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Worm;
 				INFOPLIST_KEY_NSCameraUsageDescription = "This app needs camera access to take photos of books for your listings.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -365,7 +387,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bookapp.BookApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wormapp.Worm;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

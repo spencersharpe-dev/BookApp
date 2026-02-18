@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var viewModel = AuthViewModel()
+    @Bindable var viewModel: AuthViewModel
     @State private var showCreateAccount = false
 
     var body: some View {
@@ -23,8 +23,4 @@ struct ContentView: View {
             .preferredColorScheme(.dark)
         }
     }
-}
-
-#Preview {
-    ContentView()
 }

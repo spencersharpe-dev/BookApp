@@ -90,6 +90,26 @@ class AuthViewModel {
         SupportRequest(question: "How do I update my bank account information for transfers?", status: .resolved, dateCreated: Date().addingTimeInterval(-7 * 86400))
     ]
 
+    // MARK: - Seller Store Browsing
+    var sellerStoreToView: SellerStore?
+    var selectedTab = 3
+
+    // MARK: - Demo Sellers
+    var demoSellers: [SellerStore] = [
+        SellerStore(
+            id: "stuarts-shop",
+            ownerName: "Stuart Sharpe",
+            storeName: "Stuart's Book Shop",
+            listings: [
+                BookListing(title: "The Great Gatsby", author: "F. Scott Fitzgerald", isbn: "9780743273565", publisher: "Scribner", price: 102.00, datePublished: "April 10, 1925", genre: "Fiction", attributes: "First Edition", condition: "Good", signature: "Yes", bindingType: "Hard Cover", photos: [:]),
+                BookListing(title: "To Kill a Mockingbird", author: "Harper Lee", isbn: "9780061120084", publisher: "HarperCollins", price: 85.00, datePublished: "July 11, 1960", genre: "Fiction", attributes: "First Edition", condition: "Very Good", signature: "No", bindingType: "Hard Cover", photos: [:]),
+                BookListing(title: "1984", author: "George Orwell", isbn: "9780451524935", publisher: "Secker & Warburg", price: 64.50, datePublished: "June 8, 1949", genre: "Dystopian", attributes: "Second Printing", condition: "Good", signature: "No", bindingType: "Paperback", photos: [:]),
+                BookListing(title: "Pride and Prejudice", author: "Jane Austen", isbn: "9780141439518", publisher: "Penguin Classics", price: 45.00, datePublished: "January 28, 1813", genre: "Romance", attributes: "Reprint", condition: "Fair", signature: "No", bindingType: "Paperback", photos: [:]),
+                BookListing(title: "Moby Dick", author: "Herman Melville", isbn: "9780142437247", publisher: "Harper & Brothers", price: 120.00, datePublished: "October 18, 1851", genre: "Adventure", attributes: "First Edition", condition: "Good", signature: "Yes", bindingType: "Hard Cover", photos: [:])
+            ]
+        )
+    ]
+
     // MARK: - Navigation State
     var showForgotPassword = false
     var isAuthenticated = false
@@ -313,6 +333,13 @@ struct EarningsTransaction: Identifiable {
         formatter.dateStyle = .medium
         return formatter.string(from: date)
     }
+}
+
+struct SellerStore: Identifiable {
+    let id: String
+    let ownerName: String
+    let storeName: String
+    let listings: [BookListing]
 }
 
 enum SupportStatus: String {
