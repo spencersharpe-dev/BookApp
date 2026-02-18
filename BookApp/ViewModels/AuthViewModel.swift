@@ -42,6 +42,9 @@ class AuthViewModel {
     // MARK: - Pricing
     var bookPrice = ""
 
+    // MARK: - Captured Photos (during sell flow)
+    var capturedPhotos: [String: UIImage] = [:]
+
     // MARK: - Banking & Balance
     var linkedBanks: [LinkedBank] = []
     var totalBalance: Double = 380.98
@@ -169,7 +172,14 @@ class AuthViewModel {
             author: bookAuthor,
             isbn: bookISBN,
             publisher: bookPublisher,
-            price: price
+            price: price,
+            datePublished: bookDatePublished,
+            genre: bookGenre,
+            attributes: bookAttributes,
+            condition: bookCondition,
+            signature: bookSignature,
+            bindingType: bookBindingType,
+            photos: capturedPhotos
         )
         listing.dateSold = Date()
         activeListings.append(listing)
@@ -204,6 +214,7 @@ class AuthViewModel {
         bookSignature = ""
         bookBindingType = ""
         bookPrice = ""
+        capturedPhotos = [:]
     }
 
     func submitSupportRequest(_ question: String) {
@@ -238,11 +249,22 @@ struct BookListing: Identifiable {
     let isbn: String
     let publisher: String
     let price: Double
+    let datePublished: String
+    let genre: String
+    let attributes: String
+    let condition: String
+    let signature: String
+    let bindingType: String
+    let photos: [String: UIImage]
     let dateCreated = Date()
     let orderNumber: String = String(format: "#%06d", Int.random(in: 1000...999999))
     var isSnoozed = false
     var snoozeUntil: Date?
     var dateSold: Date?
+
+    var coverImage: UIImage? {
+        photos["Cover"]
+    }
 
     var formattedPrice: String {
         String(format: "$%.2f", price)

@@ -6,7 +6,7 @@ struct MainTabView: View {
 
     var body: some View {
         TabView(selection: $selectedTab) {
-            PlaceholderTabView(title: "Store")
+            StoreHomeView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "storefront")
                     Text("Store")

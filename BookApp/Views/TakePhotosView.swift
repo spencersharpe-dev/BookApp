@@ -44,7 +44,6 @@ struct TakePhotosView: View {
     @Bindable var viewModel: AuthViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var selectedPhotoType: PhotoType?
-    @State private var capturedPhotos: [PhotoType: UIImage] = [:]
     @State private var showAddPrice = false
 
     var body: some View {
@@ -95,7 +94,7 @@ struct TakePhotosView: View {
                                     .font(.body)
                                     .foregroundColor(.black)
                                 Spacer()
-                                if capturedPhotos[photoType] != nil {
+                                if viewModel.capturedPhotos[photoType.rawValue] != nil {
                                     Image(systemName: "checkmark.circle.fill")
                                         .foregroundColor(.green)
                                 }
@@ -134,7 +133,7 @@ struct TakePhotosView: View {
         .background(Color.white)
         .fullScreenCover(item: $selectedPhotoType) { photoType in
             BookCameraView(photoType: photoType) { image in
-                capturedPhotos[photoType] = image
+                viewModel.capturedPhotos[photoType.rawValue] = image
             }
         }
         .fullScreenCover(isPresented: $showAddPrice) {
