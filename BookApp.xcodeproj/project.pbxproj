@@ -35,6 +35,8 @@
 		45BC23AB01EF90CD78AB56EF /* ReturnAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF56AB78CD90EF01AB23BC45 /* ReturnAddressView.swift */; };
 		56CD34BC12FA01DE89BC67FA /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67BC89DE01FA12BC34CD56 /* TransactionHistoryView.swift */; };
 		67DE45CD23AB12EF90CD78AB /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */; };
+		78EF56DE34CD12BC90AB78FA /* SupportListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1B2C3D4E5F6A7B8C9D0E1F /* SupportListView.swift */; };
+		89FA67EF45DE23CD01BC89AB /* SupportMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2C3D4E5F6A7B8C9D0E1F2A /* SupportMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +69,8 @@
 		EF56AB78CD90EF01AB23BC45 /* ReturnAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnAddressView.swift; sourceTree = "<group>"; };
 		FA67BC89DE01FA12BC34CD56 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
 		AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		5A1B2C3D4E5F6A7B8C9D0E1F /* SupportListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportListView.swift; sourceTree = "<group>"; };
+		6B2C3D4E5F6A7B8C9D0E1F2A /* SupportMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -120,6 +124,8 @@
 				AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */,
 				EF56AB78CD90EF01AB23BC45 /* ReturnAddressView.swift */,
 				FA67BC89DE01FA12BC34CD56 /* TransactionHistoryView.swift */,
+				5A1B2C3D4E5F6A7B8C9D0E1F /* SupportListView.swift */,
+				6B2C3D4E5F6A7B8C9D0E1F2A /* SupportMessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 				45BC23AB01EF90CD78AB56EF /* ReturnAddressView.swift in Sources */,
 				56CD34BC12FA01DE89BC67FA /* TransactionHistoryView.swift in Sources */,
 				67DE45CD23AB12EF90CD78AB /* NotificationsView.swift in Sources */,
+				78EF56DE34CD12BC90AB78FA /* SupportListView.swift in Sources */,
+				89FA67EF45DE23CD01BC89AB /* SupportMessageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

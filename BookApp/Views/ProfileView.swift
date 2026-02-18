@@ -9,6 +9,7 @@ struct ProfileView: View {
     @State private var showReturnAddress = false
     @State private var showTransactionHistory = false
     @State private var showNotifications = false
+    @State private var showSupport = false
 
     var balanceLabel: String {
         String(format: "Balance & Transfers - $%.2f", viewModel.totalBalance)
@@ -74,7 +75,9 @@ struct ProfileView: View {
                         ProfileMenuItem(title: "Notifications") {
                             showNotifications = true
                         }
-                        ProfileMenuItem(title: "Support") {}
+                        ProfileMenuItem(title: "Support") {
+                            showSupport = true
+                        }
                         ProfileMenuItem(title: "Agreements") {}
                     }
                     .padding(.top, 16)
@@ -102,6 +105,9 @@ struct ProfileView: View {
         }
         .fullScreenCover(isPresented: $showNotifications) {
             NotificationsView(viewModel: viewModel)
+        }
+        .fullScreenCover(isPresented: $showSupport) {
+            SupportListView(viewModel: viewModel)
         }
         .onChange(of: viewModel.dismissSellFlow) { _, shouldDismiss in
             if shouldDismiss {

@@ -63,6 +63,13 @@ class AuthViewModel {
     // MARK: - Listings
     var activeListings: [BookListing] = []
 
+    // MARK: - Support
+    var supportRequests: [SupportRequest] = [
+        SupportRequest(question: "I haven't received my payment for order #004521. It's been over 7 days since the book was delivered.", status: .active, dateCreated: Date().addingTimeInterval(-86400)),
+        SupportRequest(question: "The buyer is claiming the book condition was misrepresented. I listed it as 'Good' but they say pages are torn.", status: .inProgress, dateCreated: Date().addingTimeInterval(-3 * 86400)),
+        SupportRequest(question: "How do I update my bank account information for transfers?", status: .resolved, dateCreated: Date().addingTimeInterval(-7 * 86400))
+    ]
+
     // MARK: - Navigation State
     var showForgotPassword = false
     var isAuthenticated = false
@@ -178,6 +185,11 @@ class AuthViewModel {
         bookPrice = ""
     }
 
+    func submitSupportRequest(_ question: String) {
+        let request = SupportRequest(question: question, status: .active, dateCreated: Date())
+        supportRequests.insert(request, at: 0)
+    }
+
     func addLinkedBank(name: String, icon: String) {
         let bank = LinkedBank(name: name, icon: icon)
         if !linkedBanks.contains(where: { $0.name == name }) {
@@ -220,5 +232,32 @@ struct BookListing: Identifiable {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         return formatter.string(from: date)
+    }
+}
+
+enum SupportStatus: String {
+    case active = "Active"
+    case inProgress = "In Progress"
+    case resolved = "Resolved"
+}
+
+struct SupportRequest: Identifiable {
+    let id = UUID().uuidString
+    let question: String
+    let status: SupportStatus
+    let dateCreated: Date
+
+    var formattedDate: String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: dateCreated)
+    }
+
+    var statusColor: Color {
+        switch status {
+        case .active: return .blue
+        case .inProgress: return .orange
+        case .resolved: return .green
+        }
     }
 }
