@@ -71,14 +71,10 @@ struct ReviewListingView: View {
                 Text("Done")
                     .font(.headline)
                     .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                    .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 56)
-                    .background(Color.white)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color.black, lineWidth: 2)
-                    )
+                    .background(Color.black)
                     .cornerRadius(12)
             }
             .padding(.horizontal, 24)

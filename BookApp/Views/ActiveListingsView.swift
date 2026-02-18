@@ -4,6 +4,8 @@ struct ActiveListingsView: View {
     @Bindable var viewModel: AuthViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var showSellBook = false
+    @State private var listingToSnooze: BookListing?
+    @State private var listingToDelete: BookListing?
 
     var body: some View {
         VStack(spacing: 0) {
@@ -70,17 +72,13 @@ struct ActiveListingsView: View {
                             .listRowSeparator(.hidden)
                             .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                                 Button(role: .destructive) {
-                                    withAnimation {
-                                        viewModel.deleteListing(listing)
-                                    }
+                                    listingToDelete = listing
                                 } label: {
                                     Label("Delete", systemImage: "trash")
                                 }
 
                                 Button {
-                                    withAnimation {
-                                        viewModel.snoozeListing(listing)
-                                    }
+                                    listingToSnooze = listing
                                 } label: {
                                     Label("Snooze", systemImage: "moon.zzz")
                                 }
@@ -100,6 +98,42 @@ struct ActiveListingsView: View {
                 showSellBook = false
                 viewModel.dismissSellFlow = false
             }
+        }
+        .alert("Snooze Listing", isPresented: Binding(
+            get: { listingToSnooze != nil },
+            set: { if !$0 { listingToSnooze = nil } }
+        )) {
+            Button("Cancel", role: .cancel) {
+                listingToSnooze = nil
+            }
+            Button("Snooze") {
+                if let listing = listingToSnooze {
+                    withAnimation {
+                        viewModel.snoozeListing(listing)
+                    }
+                }
+                listingToSnooze = nil
+            }
+        } message: {
+            Text("Are you sure you want to snooze this listing? Snoozing a listing will deactivate the listing for 48 hours.")
+        }
+        .alert("Delete Listing", isPresented: Binding(
+            get: { listingToDelete != nil },
+            set: { if !$0 { listingToDelete = nil } }
+        )) {
+            Button("Cancel", role: .cancel) {
+                listingToDelete = nil
+            }
+            Button("Delete", role: .destructive) {
+                if let listing = listingToDelete {
+                    withAnimation {
+                        viewModel.deleteListing(listing)
+                    }
+                }
+                listingToDelete = nil
+            }
+        } message: {
+            Text("Are you sure you want to delete this listing?")
         }
     }
 }
