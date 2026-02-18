@@ -47,6 +47,19 @@ class AuthViewModel {
     var totalBalance: Double = 380.98
     var selectedBankId: String?
 
+    // MARK: - Return Address (defaults to store address)
+    var returnAddress = ""
+    var returnAddress2 = ""
+    var returnCity = ""
+    var returnState = ""
+    var returnZipCode = ""
+    var returnCountry = "United States"
+
+    // MARK: - Notification Settings
+    var generalUpdates = false
+    var newPurchases = false
+    var shippingUpdates = false
+
     // MARK: - Listings
     var activeListings: [BookListing] = []
 
@@ -113,16 +126,28 @@ class AuthViewModel {
         showForgotPassword = false
     }
 
+    func initializeReturnAddress() {
+        if returnAddress.isEmpty {
+            returnAddress = storeAddress
+            returnAddress2 = storeAddress2
+            returnCity = storeCity
+            returnState = storeState
+            returnZipCode = storeZipCode
+            returnCountry = storeCountry
+        }
+    }
+
     func submitListing() {
         let cents = Int(bookPrice) ?? 0
         let price = Double(cents) / 100.0
-        let listing = BookListing(
+        var listing = BookListing(
             title: bookTitle,
             author: bookAuthor,
             isbn: bookISBN,
             publisher: bookPublisher,
             price: price
         )
+        listing.dateSold = Date()
         activeListings.append(listing)
         totalBalance += price
         resetBookFields()
@@ -181,10 +206,19 @@ struct BookListing: Identifiable {
     let publisher: String
     let price: Double
     let dateCreated = Date()
+    let orderNumber: String = String(format: "#%06d", Int.random(in: 1000...999999))
     var isSnoozed = false
     var snoozeUntil: Date?
+    var dateSold: Date?
 
     var formattedPrice: String {
         String(format: "$%.2f", price)
+    }
+
+    var formattedDateSold: String {
+        guard let date = dateSold else { return "Pending" }
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
     }
 }

@@ -32,6 +32,9 @@
 		12AB01EF89CB67AB45ED23BC /* BalanceTransfersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23DE45FA67BC89DE01FA12 /* BalanceTransfersView.swift */; };
 		23BC12FA90DC78BC56FE34CD /* BankingSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD34EF56AB78CD90EF01AB23 /* BankingSetupView.swift */; };
 		34AB23BC01FA89DE67FA45DE /* ActiveListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45FA67BC89DE01FA23AB34 /* ActiveListingsView.swift */; };
+		45BC23AB01EF90CD78AB56EF /* ReturnAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF56AB78CD90EF01AB23BC45 /* ReturnAddressView.swift */; };
+		56CD34BC12FA01DE89BC67FA /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67BC89DE01FA12BC34CD56 /* TransactionHistoryView.swift */; };
+		67DE45CD23AB12EF90CD78AB /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		BC23DE45FA67BC89DE01FA12 /* BalanceTransfersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTransfersView.swift; sourceTree = "<group>"; };
 		CD34EF56AB78CD90EF01AB23 /* BankingSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingSetupView.swift; sourceTree = "<group>"; };
 		DE45FA67BC89DE01FA23AB34 /* ActiveListingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveListingsView.swift; sourceTree = "<group>"; };
+		EF56AB78CD90EF01AB23BC45 /* ReturnAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnAddressView.swift; sourceTree = "<group>"; };
+		FA67BC89DE01FA12BC34CD56 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -111,6 +117,9 @@
 				AB12CD34EF56AB78CD90EF01 /* ProfileInfoView.swift */,
 				BC23DE45FA67BC89DE01FA12 /* BalanceTransfersView.swift */,
 				CD34EF56AB78CD90EF01AB23 /* BankingSetupView.swift */,
+				AB78CD90EF12AB23CD45DE67 /* NotificationsView.swift */,
+				EF56AB78CD90EF01AB23BC45 /* ReturnAddressView.swift */,
+				FA67BC89DE01FA12BC34CD56 /* TransactionHistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +233,9 @@
 				12AB01EF89CB67AB45ED23BC /* BalanceTransfersView.swift in Sources */,
 				23BC12FA90DC78BC56FE34CD /* BankingSetupView.swift in Sources */,
 				34AB23BC01FA89DE67FA45DE /* ActiveListingsView.swift in Sources */,
+				45BC23AB01EF90CD78AB56EF /* ReturnAddressView.swift in Sources */,
+				56CD34BC12FA01DE89BC67FA /* TransactionHistoryView.swift in Sources */,
+				67DE45CD23AB12EF90CD78AB /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

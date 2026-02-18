@@ -6,6 +6,9 @@ struct ProfileView: View {
     @State private var showProfileInfo = false
     @State private var showBalanceTransfers = false
     @State private var showActiveListings = false
+    @State private var showReturnAddress = false
+    @State private var showTransactionHistory = false
+    @State private var showNotifications = false
 
     var balanceLabel: String {
         String(format: "Balance & Transfers - $%.2f", viewModel.totalBalance)
@@ -62,9 +65,15 @@ struct ProfileView: View {
                         ProfileMenuItem(title: "Active Listings") {
                             showActiveListings = true
                         }
-                        ProfileMenuItem(title: "Shipping") {}
-                        ProfileMenuItem(title: "Transaction History") {}
-                        ProfileMenuItem(title: "Notifications") {}
+                        ProfileMenuItem(title: "Return Address") {
+                            showReturnAddress = true
+                        }
+                        ProfileMenuItem(title: "Transaction History") {
+                            showTransactionHistory = true
+                        }
+                        ProfileMenuItem(title: "Notifications") {
+                            showNotifications = true
+                        }
                         ProfileMenuItem(title: "Support") {}
                         ProfileMenuItem(title: "Agreements") {}
                     }
@@ -84,6 +93,15 @@ struct ProfileView: View {
         }
         .fullScreenCover(isPresented: $showActiveListings) {
             ActiveListingsView(viewModel: viewModel)
+        }
+        .fullScreenCover(isPresented: $showReturnAddress) {
+            ReturnAddressView(viewModel: viewModel)
+        }
+        .fullScreenCover(isPresented: $showTransactionHistory) {
+            TransactionHistoryView(viewModel: viewModel)
+        }
+        .fullScreenCover(isPresented: $showNotifications) {
+            NotificationsView(viewModel: viewModel)
         }
         .onChange(of: viewModel.dismissSellFlow) { _, shouldDismiss in
             if shouldDismiss {

@@ -4,6 +4,31 @@ struct ProfileInfoView: View {
     @Bindable var viewModel: AuthViewModel
     @Environment(\.dismiss) private var dismiss
 
+    // Snapshot of original values to detect changes
+    @State private var originalFullName = ""
+    @State private var originalStoreName = ""
+    @State private var originalEmail = ""
+    @State private var originalPhone = ""
+    @State private var originalAddress = ""
+    @State private var originalAddress2 = ""
+    @State private var originalCity = ""
+    @State private var originalState = ""
+    @State private var originalZipCode = ""
+    @State private var originalCountry = ""
+
+    var hasChanges: Bool {
+        viewModel.storeFullName != originalFullName
+            || viewModel.storeName != originalStoreName
+            || viewModel.storePrimaryEmail != originalEmail
+            || viewModel.storeMobilePhone != originalPhone
+            || viewModel.storeAddress != originalAddress
+            || viewModel.storeAddress2 != originalAddress2
+            || viewModel.storeCity != originalCity
+            || viewModel.storeState != originalState
+            || viewModel.storeZipCode != originalZipCode
+            || viewModel.storeCountry != originalCountry
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             // Header
@@ -25,13 +50,13 @@ struct ProfileInfoView: View {
                 Spacer()
 
                 Button {
-                    // TODO: Save profile changes
                     dismiss()
                 } label: {
                     Text("Save")
                         .font(.body)
-                        .foregroundColor(.blue)
+                        .foregroundColor(hasChanges ? .blue : .gray)
                 }
+                .disabled(!hasChanges)
             }
             .padding(.horizontal, 24)
             .padding(.top, 16)
@@ -57,5 +82,17 @@ struct ProfileInfoView: View {
             }
         }
         .background(Color.white)
+        .onAppear {
+            originalFullName = viewModel.storeFullName
+            originalStoreName = viewModel.storeName
+            originalEmail = viewModel.storePrimaryEmail
+            originalPhone = viewModel.storeMobilePhone
+            originalAddress = viewModel.storeAddress
+            originalAddress2 = viewModel.storeAddress2
+            originalCity = viewModel.storeCity
+            originalState = viewModel.storeState
+            originalZipCode = viewModel.storeZipCode
+            originalCountry = viewModel.storeCountry
+        }
     }
 }
