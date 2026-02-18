@@ -65,6 +65,7 @@ struct ReviewListingView: View {
 
             // Done button
             Button {
+                viewModel.submitListing()
                 viewModel.dismissSellFlow = true
             } label: {
                 Text("Done")

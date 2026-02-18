@@ -47,6 +47,9 @@ class AuthViewModel {
     var totalBalance: Double = 380.98
     var selectedBankId: String?
 
+    // MARK: - Listings
+    var activeListings: [BookListing] = []
+
     // MARK: - Navigation State
     var showForgotPassword = false
     var isAuthenticated = false
@@ -110,6 +113,46 @@ class AuthViewModel {
         showForgotPassword = false
     }
 
+    func submitListing() {
+        let cents = Int(bookPrice) ?? 0
+        let price = Double(cents) / 100.0
+        let listing = BookListing(
+            title: bookTitle,
+            author: bookAuthor,
+            isbn: bookISBN,
+            publisher: bookPublisher,
+            price: price
+        )
+        activeListings.append(listing)
+        totalBalance += price
+        resetBookFields()
+    }
+
+    func snoozeListing(_ listing: BookListing) {
+        if let index = activeListings.firstIndex(where: { $0.id == listing.id }) {
+            activeListings[index].isSnoozed = true
+            activeListings[index].snoozeUntil = Date().addingTimeInterval(48 * 60 * 60)
+        }
+    }
+
+    func deleteListing(_ listing: BookListing) {
+        activeListings.removeAll { $0.id == listing.id }
+    }
+
+    private func resetBookFields() {
+        bookAuthor = ""
+        bookTitle = ""
+        bookISBN = ""
+        bookPublisher = ""
+        bookDatePublished = ""
+        bookGenre = ""
+        bookAttributes = ""
+        bookCondition = ""
+        bookSignature = ""
+        bookBindingType = ""
+        bookPrice = ""
+    }
+
     func addLinkedBank(name: String, icon: String) {
         let bank = LinkedBank(name: name, icon: icon)
         if !linkedBanks.contains(where: { $0.name == name }) {
@@ -128,4 +171,20 @@ struct LinkedBank: Identifiable, Equatable {
     let id = UUID().uuidString
     let name: String
     let icon: String
+}
+
+struct BookListing: Identifiable {
+    let id = UUID().uuidString
+    let title: String
+    let author: String
+    let isbn: String
+    let publisher: String
+    let price: Double
+    let dateCreated = Date()
+    var isSnoozed = false
+    var snoozeUntil: Date?
+
+    var formattedPrice: String {
+        String(format: "$%.2f", price)
+    }
 }

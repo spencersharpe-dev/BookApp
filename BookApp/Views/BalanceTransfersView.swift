@@ -9,6 +9,10 @@ struct BalanceTransfersView: View {
         String(format: "$%.2f", viewModel.totalBalance)
     }
 
+    var hasFunds: Bool {
+        viewModel.totalBalance > 0
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             // Header
@@ -48,23 +52,24 @@ struct BalanceTransfersView: View {
 
             Spacer()
 
-            // Withdraw button
+            // Transfer Funds button
             Button {
                 showBankingSetup = true
             } label: {
-                Text("Withdraw")
+                Text("Transfer Funds")
                     .font(.headline)
                     .fontWeight(.semibold)
-                    .foregroundColor(.black)
+                    .foregroundColor(hasFunds ? .white : .gray)
                     .frame(maxWidth: .infinity)
                     .frame(height: 56)
-                    .background(Color.white)
+                    .background(hasFunds ? Color.black : Color.white)
                     .overlay(
                         RoundedRectangle(cornerRadius: 12)
-                            .stroke(Color.black, lineWidth: 2)
+                            .stroke(hasFunds ? Color.clear : Color.gray.opacity(0.3), lineWidth: 2)
                     )
                     .cornerRadius(12)
             }
+            .disabled(!hasFunds)
             .padding(.horizontal, 24)
             .padding(.bottom, 40)
         }
