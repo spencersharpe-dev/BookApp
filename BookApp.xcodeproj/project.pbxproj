@@ -28,6 +28,9 @@
 		F2E1D0C9B8A7F6E5D4C3B2A1 /* SetUpStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* SetUpStoreView.swift */; };
 		1FEEDDCCBBAA00998877665F /* AddPriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6677889900AABBCCDDEEF1 /* AddPriceView.swift */; };
 		2FB011223344556677889AAF /* ReviewListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9988776655443322110BF2 /* ReviewListingView.swift */; };
+		01FE90DC78BA56FE34DC12AB /* ProfileInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB12CD34EF56AB78CD90EF01 /* ProfileInfoView.swift */; };
+		12AB01EF89CB67AB45ED23BC /* BalanceTransfersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC23DE45FA67BC89DE01FA12 /* BalanceTransfersView.swift */; };
+		23BC12FA90DC78BC56FE34CD /* BankingSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD34EF56AB78CD90EF01AB23 /* BankingSetupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,9 @@
 		F38AB250C91DC38A324DD858 /* BookAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppApp.swift; sourceTree = "<group>"; };
 		FF6677889900AABBCCDDEEF1 /* AddPriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPriceView.swift; sourceTree = "<group>"; };
 		AA9988776655443322110BF2 /* ReviewListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListingView.swift; sourceTree = "<group>"; };
+		AB12CD34EF56AB78CD90EF01 /* ProfileInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfoView.swift; sourceTree = "<group>"; };
+		BC23DE45FA67BC89DE01FA12 /* BalanceTransfersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTransfersView.swift; sourceTree = "<group>"; };
+		CD34EF56AB78CD90EF01AB23 /* BankingSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingSetupView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -99,6 +105,9 @@
 				BB22CC33DD44EE55FF66AA77 /* ProfileView.swift */,
 				AA9988776655443322110BF2 /* ReviewListingView.swift */,
 				DD44EE55FF66AA77BB88CC99 /* TakePhotosView.swift */,
+				AB12CD34EF56AB78CD90EF01 /* ProfileInfoView.swift */,
+				BC23DE45FA67BC89DE01FA12 /* BalanceTransfersView.swift */,
+				CD34EF56AB78CD90EF01AB23 /* BankingSetupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -208,6 +217,9 @@
 				00DD99CC88BB77AA66FF55EE /* BookCameraView.swift in Sources */,
 				1FEEDDCCBBAA00998877665F /* AddPriceView.swift in Sources */,
 				2FB011223344556677889AAF /* ReviewListingView.swift in Sources */,
+				01FE90DC78BA56FE34DC12AB /* ProfileInfoView.swift in Sources */,
+				12AB01EF89CB67AB45ED23BC /* BalanceTransfersView.swift in Sources */,
+				23BC12FA90DC78BC56FE34CD /* BankingSetupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

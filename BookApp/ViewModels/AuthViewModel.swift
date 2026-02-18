@@ -42,6 +42,11 @@ class AuthViewModel {
     // MARK: - Pricing
     var bookPrice = ""
 
+    // MARK: - Banking & Balance
+    var linkedBanks: [LinkedBank] = []
+    var totalBalance: Double = 380.98
+    var selectedBankId: String?
+
     // MARK: - Navigation State
     var showForgotPassword = false
     var isAuthenticated = false
@@ -105,9 +110,22 @@ class AuthViewModel {
         showForgotPassword = false
     }
 
+    func addLinkedBank(name: String, icon: String) {
+        let bank = LinkedBank(name: name, icon: icon)
+        if !linkedBanks.contains(where: { $0.name == name }) {
+            linkedBanks.append(bank)
+        }
+    }
+
     // MARK: - Private
     private func isValidEmail(_ email: String) -> Bool {
         let pattern = #"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"#
         return email.range(of: pattern, options: .regularExpression) != nil
     }
+}
+
+struct LinkedBank: Identifiable, Equatable {
+    let id = UUID().uuidString
+    let name: String
+    let icon: String
 }

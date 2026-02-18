@@ -5,17 +5,17 @@ struct PlaidBankSelectionView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var searchText = ""
 
-    private let banks: [(name: String, url: String)] = [
-        ("Chase", "www.chase.com"),
-        ("Bank of America", "www.bankofamerica.com"),
-        ("Wells Fargo", "www.wellsfargo.com"),
-        ("First American", "www.firstamerican.com"),
-        ("Bank of California", "www.bankofcalifornia.com"),
-        ("Nevada Credit Union", "www.nevadacreditunion.com"),
-        ("Orange County Credit Union", "www.occc.com")
+    private let banks: [(name: String, url: String, icon: String)] = [
+        ("Chase", "www.chase.com", "building.columns"),
+        ("Bank of America", "www.bankofamerica.com", "building.columns.fill"),
+        ("Wells Fargo", "www.wellsfargo.com", "building.columns"),
+        ("First American", "www.firstamerican.com", "building.2"),
+        ("Bank of California", "www.bankofcalifornia.com", "building.columns"),
+        ("Nevada Credit Union", "www.nevadacreditunion.com", "creditcard"),
+        ("Orange County Credit Union", "www.occc.com", "creditcard")
     ]
 
-    var filteredBanks: [(name: String, url: String)] {
+    var filteredBanks: [(name: String, url: String, icon: String)] {
         if searchText.isEmpty {
             return banks
         }
@@ -88,7 +88,8 @@ struct PlaidBankSelectionView: View {
                 LazyVStack(spacing: 0) {
                     ForEach(filteredBanks, id: \.name) { bank in
                         Button {
-                            // TODO: Handle bank selection
+                            viewModel.addLinkedBank(name: bank.name, icon: bank.icon)
+                            dismiss()
                         } label: {
                             HStack(spacing: 16) {
                                 // Placeholder bank icon

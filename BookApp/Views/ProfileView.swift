@@ -3,17 +3,12 @@ import SwiftUI
 struct ProfileView: View {
     @Bindable var viewModel: AuthViewModel
     @State private var showBookDetails = false
+    @State private var showProfileInfo = false
+    @State private var showBalanceTransfers = false
 
-    private let menuItems = [
-        "Profile",
-        "Balance & Transfers - $380.98",
-        "Active Listings",
-        "Shipping",
-        "Transaction History",
-        "Notifications",
-        "Support",
-        "Agreements"
-    ]
+    var balanceLabel: String {
+        String(format: "Balance & Transfers - $%.2f", viewModel.totalBalance)
+    }
 
     var body: some View {
         VStack(spacing: 0) {
@@ -57,25 +52,18 @@ struct ProfileView: View {
 
                     // Menu items
                     VStack(spacing: 0) {
-                        ForEach(menuItems, id: \.self) { item in
-                            Button {
-                                // TODO: Navigate to each section
-                            } label: {
-                                HStack {
-                                    Text(item)
-                                        .font(.body)
-                                        .foregroundColor(.black)
-                                    Spacer()
-                                    Image(systemName: "chevron.right")
-                                        .font(.caption)
-                                        .foregroundColor(.gray)
-                                }
-                                .padding(.horizontal, 24)
-                                .padding(.vertical, 18)
-                            }
-
-                            Divider()
+                        ProfileMenuItem(title: "Profile") {
+                            showProfileInfo = true
                         }
+                        ProfileMenuItem(title: balanceLabel) {
+                            showBalanceTransfers = true
+                        }
+                        ProfileMenuItem(title: "Active Listings") {}
+                        ProfileMenuItem(title: "Shipping") {}
+                        ProfileMenuItem(title: "Transaction History") {}
+                        ProfileMenuItem(title: "Notifications") {}
+                        ProfileMenuItem(title: "Support") {}
+                        ProfileMenuItem(title: "Agreements") {}
                     }
                     .padding(.top, 16)
                 }
@@ -85,11 +73,40 @@ struct ProfileView: View {
         .fullScreenCover(isPresented: $showBookDetails) {
             BookDetailsView(viewModel: viewModel)
         }
+        .fullScreenCover(isPresented: $showProfileInfo) {
+            ProfileInfoView(viewModel: viewModel)
+        }
+        .fullScreenCover(isPresented: $showBalanceTransfers) {
+            BalanceTransfersView(viewModel: viewModel)
+        }
         .onChange(of: viewModel.dismissSellFlow) { _, shouldDismiss in
             if shouldDismiss {
                 showBookDetails = false
                 viewModel.dismissSellFlow = false
             }
         }
+    }
+}
+
+struct ProfileMenuItem: View {
+    let title: String
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            HStack {
+                Text(title)
+                    .font(.body)
+                    .foregroundColor(.black)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+            .padding(.horizontal, 24)
+            .padding(.vertical, 18)
+        }
+
+        Divider()
     }
 }
