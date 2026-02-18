@@ -1,9 +1,35 @@
 import SwiftUI
 
+let bookGenres = [
+    "Fantasy",
+    "Science Fiction",
+    "Mystery & Crime",
+    "Romance",
+    "Horror",
+    "Literary Fiction",
+    "Action & Adventure",
+    "Humor & Satire",
+    "Children's & Young Adult",
+    "Graphic Novels & Comics",
+    "Biography & Memoir",
+    "History",
+    "Travel",
+    "Self-Help & Personal Development",
+    "Science & Technology",
+    "Health & Wellness",
+    "Food & Drink",
+    "Arts & Culture",
+    "Religion & Spirituality",
+    "Politics & Current Affairs",
+    "Education & Reference",
+    "Other"
+]
+
 struct BookDetailsView: View {
     @Bindable var viewModel: AuthViewModel
     @Environment(\.dismiss) private var dismiss
     @State private var showTakePhotos = false
+    @State private var showGenrePicker = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -38,7 +64,9 @@ struct BookDetailsView: View {
                     BookDetailField(label: "ISBN", placeholder: "Add ISBN", text: $viewModel.bookISBN, keyboardType: .numberPad)
                     BookDetailField(label: "Publisher", placeholder: "Add Publisher", text: $viewModel.bookPublisher)
                     BookDetailField(label: "Date Published", placeholder: "Add Publishing Date", text: $viewModel.bookDatePublished)
-                    BookDetailField(label: "Genre", placeholder: "Add Genre", text: $viewModel.bookGenre)
+                    BookDetailPickerField(label: "Genre", placeholder: "Select Genre", value: viewModel.bookGenre) {
+                        showGenrePicker = true
+                    }
                     BookDetailField(label: "Attributes", placeholder: "Select Attributes", text: $viewModel.bookAttributes)
                     BookDetailField(label: "Condition", placeholder: "Select Condition", text: $viewModel.bookCondition)
                     BookDetailField(label: "Signature", placeholder: "Select Signature", text: $viewModel.bookSignature)
@@ -76,6 +104,96 @@ struct BookDetailsView: View {
             if shouldDismiss {
                 dismiss()
             }
+        }
+        .sheet(isPresented: $showGenrePicker) {
+            GenrePickerSheet(selectedGenre: $viewModel.bookGenre)
+        }
+    }
+}
+
+struct GenrePickerSheet: View {
+    @Binding var selectedGenre: String
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        VStack(spacing: 0) {
+            // Header
+            HStack {
+                Text("Select Genre")
+                    .font(.title2)
+                    .fontWeight(.medium)
+                    .foregroundColor(.black)
+                Spacer()
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.title3)
+                        .fontWeight(.medium)
+                        .foregroundColor(.black)
+                }
+            }
+            .padding(.horizontal, 24)
+            .padding(.top, 20)
+            .padding(.bottom, 12)
+
+            Divider()
+
+            ScrollView {
+                VStack(spacing: 0) {
+                    ForEach(bookGenres, id: \.self) { genre in
+                        Button {
+                            selectedGenre = genre
+                            dismiss()
+                        } label: {
+                            HStack {
+                                Text(genre)
+                                    .font(.body)
+                                    .foregroundColor(.black)
+                                Spacer()
+                                if selectedGenre == genre {
+                                    Image(systemName: "checkmark")
+                                        .font(.body)
+                                        .foregroundColor(.black)
+                                }
+                            }
+                            .padding(.horizontal, 24)
+                            .padding(.vertical, 14)
+                        }
+
+                        Divider()
+                    }
+                }
+            }
+        }
+        .background(Color.white)
+        .presentationDetents([.medium, .large])
+    }
+}
+
+struct BookDetailPickerField: View {
+    let label: String
+    let placeholder: String
+    let value: String
+    let action: () -> Void
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Button(action: action) {
+                HStack {
+                    Text(label)
+                        .font(.body)
+                        .foregroundColor(.black)
+                    Spacer()
+                    Text(value.isEmpty ? placeholder : value)
+                        .font(.body)
+                        .foregroundColor(value.isEmpty ? .gray.opacity(0.5) : .black)
+                }
+                .padding(.vertical, 14)
+            }
+
+            Divider()
+                .background(Color.gray.opacity(0.3))
         }
     }
 }
