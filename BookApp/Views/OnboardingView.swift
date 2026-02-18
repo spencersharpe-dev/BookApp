@@ -39,24 +39,28 @@ struct OnboardingView: View {
         )
     ]
 
+    private var safePage: OnboardingPage {
+        pages[min(currentPage, pages.count - 1)]
+    }
+
     var body: some View {
         VStack(spacing: 0) {
             Spacer()
 
             // Icon
-            Image(systemName: pages[currentPage].icon)
+            Image(systemName: safePage.icon)
                 .font(.system(size: 80))
                 .foregroundColor(.black)
 
             // Title
-            Text(pages[currentPage].title)
+            Text(safePage.title)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
                 .padding(.top, 32)
 
             // Description
-            Text(pages[currentPage].description)
+            Text(safePage.description)
                 .font(.body)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
