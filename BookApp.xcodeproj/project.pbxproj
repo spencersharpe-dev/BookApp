@@ -46,6 +46,7 @@
 		F6A7B8C90D1E2F3A4B5C6D7E /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D5E6F7A8B9C0D1E2F3A4B /* CheckoutView.swift */; };
 		A7B8C90D1E2F3A4B5C6D7E8F /* MakeOfferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5E6F7A8B9C0D1E2F3A4B5C /* MakeOfferView.swift */; };
 		B8C90D1E2F3A4B5C6D7E8F9A /* OfferSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6F7A8B9C0D1E2F3A4B5C6D /* OfferSuccessView.swift */; };
+		6F7A8B9C0D1E2F3A4B5C6D7E /* ListingsTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8B9C0D1E2F3A4B5C6D7E8F /* ListingsTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		3C4D5E6F7A8B9C0D1E2F3A4B /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		4D5E6F7A8B9C0D1E2F3A4B5C /* MakeOfferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOfferView.swift; sourceTree = "<group>"; };
 		5E6F7A8B9C0D1E2F3A4B5C6D /* OfferSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferSuccessView.swift; sourceTree = "<group>"; };
+		7A8B9C0D1E2F3A4B5C6D7E8F /* ListingsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -153,6 +155,7 @@
 				3C4D5E6F7A8B9C0D1E2F3A4B /* CheckoutView.swift */,
 				4D5E6F7A8B9C0D1E2F3A4B5C /* MakeOfferView.swift */,
 				5E6F7A8B9C0D1E2F3A4B5C6D /* OfferSuccessView.swift */,
+				7A8B9C0D1E2F3A4B5C6D7E8F /* ListingsTabView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				F6A7B8C90D1E2F3A4B5C6D7E /* CheckoutView.swift in Sources */,
 				A7B8C90D1E2F3A4B5C6D7E8F /* MakeOfferView.swift in Sources */,
 				B8C90D1E2F3A4B5C6D7E8F9A /* OfferSuccessView.swift in Sources */,
+				6F7A8B9C0D1E2F3A4B5C6D7E /* ListingsTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

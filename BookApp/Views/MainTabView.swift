@@ -12,7 +12,7 @@ struct MainTabView: View {
                 }
                 .tag(0)
 
-            PlaceholderTabView(title: "Listings")
+            ListingsTabView(viewModel: viewModel)
                 .tabItem {
                     Image(systemName: "list.bullet.rectangle")
                     Text("Listings")

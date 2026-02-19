@@ -19,6 +19,17 @@ struct StoreHomeView: View {
         GridItem(.flexible(), spacing: 16)
     ]
 
+    var genreGroups: [(genre: String, listings: [BookListing])] {
+        var grouped: [String: [BookListing]] = [:]
+        for listing in viewModel.activeListings {
+            let genre = listing.genre.isEmpty ? "Other" : listing.genre
+            grouped[genre, default: []].append(listing)
+        }
+        return grouped
+            .map { (genre: $0.key, listings: $0.value) }
+            .sorted { $0.genre < $1.genre }
+    }
+
     var body: some View {
         ZStack {
             VStack(spacing: 0) {
@@ -82,7 +93,7 @@ struct StoreHomeView: View {
                             .padding(.top, 10)
                         }
 
-                        // Book listings grid
+                        // Book listings grouped by genre
                         if viewModel.activeListings.isEmpty {
                             VStack(spacing: 12) {
                                 Text("No books listed yet")
@@ -96,17 +107,28 @@ struct StoreHomeView: View {
                             }
                             .padding(.top, 60)
                         } else {
-                            LazyVGrid(columns: columns, spacing: 16) {
-                                ForEach(viewModel.activeListings) { listing in
-                                    Button {
-                                        selectedListing = listing
-                                    } label: {
-                                        StoreListingCard(listing: listing)
+                            ForEach(genreGroups, id: \.genre) { group in
+                                VStack(alignment: .leading, spacing: 0) {
+                                    Text(group.genre)
+                                        .font(.title3)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(.black)
+                                        .padding(.horizontal, 24)
+                                        .padding(.top, 24)
+                                        .padding(.bottom, 12)
+
+                                    LazyVGrid(columns: columns, spacing: 16) {
+                                        ForEach(group.listings) { listing in
+                                            Button {
+                                                selectedListing = listing
+                                            } label: {
+                                                StoreListingCard(listing: listing)
+                                            }
+                                        }
                                     }
+                                    .padding(.horizontal, 24)
                                 }
                             }
-                            .padding(.horizontal, 24)
-                            .padding(.top, 20)
                             .padding(.bottom, 24)
                         }
                     }
